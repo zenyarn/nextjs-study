@@ -167,6 +167,9 @@
   },
   "active": "b424503663f36ac8",
   "lastOpenFiles": [
+    "AppRouter/Rendering/ServerClientComponents.md",
+    "AppRouter/Rendering",
+    "AppRouter/Routing/DynamicRoutes.md",
     "AppRouter/Routing/RoutingBasics.md",
     "AppRouter/Routing",
     "AppRouter.md",

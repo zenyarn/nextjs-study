@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function FeaturedProducts() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-12 px-4">
@@ -6,16 +8,21 @@ export default function FeaturedProducts() {
         {featuredProducts.map((product) => (
           <div
             key={product.id}
-            className="border rounded-lg overflow-hidden shadow-md"
+            className="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
           >
-            <div className="bg-gray-200 h-48 flex items-center justify-center">
-              <span className="text-gray-500">[产品图片]</span>
-            </div>
-            <div className="p-4">
-              <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
-              <p className="text-gray-600 mb-2">{product.description}</p>
-              <p className="text-blue-600 font-medium">¥{product.price}</p>
-            </div>
+            <Link href={`/products/${product.id}`}>
+              <div className="bg-gray-200 h-48 flex items-center justify-center">
+                <span className="text-gray-500">[产品图片]</span>
+              </div>
+              <div className="p-4">
+                <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
+                <p className="text-gray-600 mb-2">{product.description}</p>
+                <p className="text-blue-600 font-medium">¥{product.price}</p>
+                <div className="mt-4 text-blue-500 hover:text-blue-700">
+                  查看详情 →
+                </div>
+              </div>
+            </Link>
           </div>
         ))}
       </div>
