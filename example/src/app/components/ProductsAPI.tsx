@@ -53,7 +53,7 @@ export default function ProductsAPI() {
           id="endpoint"
           value={endpoint}
           onChange={(e) => setEndpoint(e.target.value)}
-          className="block w-full border-secondary-dark rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+          className="block w-full border-secondary-dark rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-primary"
         >
           <option value="/api/hello">GET /api/hello</option>
           <option value="/api/products">GET /api/products</option>
@@ -61,6 +61,15 @@ export default function ProductsAPI() {
           <option value="/api/products/1">GET /api/products/1</option>
           <option value="/api/products/2">GET /api/products/2</option>
         </select>
+      </div>
+
+      <div className="mt-8 bg-secondary border border-secondary-dark rounded p-4">
+        <h3 className="text-lg font-semibold mb-2 text-text-primary">
+          API 响应:
+        </h3>
+        <pre className="bg-white p-3 rounded border overflow-x-auto">
+          {response ? JSON.stringify(response, null, 2) : "加载中..."}
+        </pre>
       </div>
 
       <div className="flex justify-between mb-4">
@@ -78,15 +87,6 @@ export default function ProductsAPI() {
           {error}
         </div>
       )}
-
-      <div className="bg-secondary border border-secondary-dark rounded p-4">
-        <h3 className="text-lg font-semibold mb-2 text-text-primary">
-          API 响应:
-        </h3>
-        <pre className="bg-white p-3 rounded border overflow-x-auto">
-          {response ? JSON.stringify(response, null, 2) : "加载中..."}
-        </pre>
-      </div>
     </div>
   );
 }
