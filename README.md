@@ -7,6 +7,10 @@
 - **example/**：用于运行文档中提供的示例代码。随着学习过程的推进，新的示例可能会覆盖之前的代码。
 - **notes/**：存放学习过程中的笔记，以 Markdown 格式记录，支持 Obsidian 的双向链接语法。
 - **prompts/**：存放与 AI 助手交流的提示词。
+  - **system_prompt_0.md**：我所写的初始提示词
+  - **system_prompt_1.md**：AI 优化后的提示词
+  - **role.md**：AI 生成的 cursor role
+- **catalogue.md**：AI 生成的学习大纲
 
 ## 学习方法
 

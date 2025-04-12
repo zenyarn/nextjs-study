@@ -48,5 +48,5 @@
 现在，首先要做三件事：
 
 1. 根据本项目的定位，撰写 @README.md 介绍本项目。
-2. 根据我所期望的你在本项目中的身份定位，撰写 cursor rule： @coding-teacher.mdc
+2. 根据我所期望的你在本项目中的身份定位，撰写 cursor rule： @role.md
 3. 深入阅读两份 NextJS 文档，参考文档中知识的组织方式，编写教学大纲于 @catalogue.md ，我随后将进一步与你商讨和迭代这份教学大纲
