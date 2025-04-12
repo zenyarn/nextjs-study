@@ -3,6 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary: #f3f4f6;
+  --secondary-dark: #e5e7eb;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --text-light: #9ca3af;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 @theme inline {
@@ -12,15 +24,53 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* 禁用深色模式自动切换 */
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
+*/
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--text-primary);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 优化链接样式 */
+a {
+  color: var(--primary);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* 修正按钮样式 */
+button {
+  font-weight: 500;
+}
+
+/* 增加阴影效果 */
+.shadow {
+  box-shadow: var(--shadow);
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
+
+/* 提高对比度的文本类 */
+.text-high-contrast {
+  color: var(--text-primary) !important;
+}
+
+.bg-card {
+  background-color: white;
+  border: 1px solid var(--secondary-dark);
+  border-radius: 0.5rem;
 }
